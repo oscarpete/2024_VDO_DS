@@ -1,0 +1,6 @@
+# scipy notebook
+docker run -it --rm -p 8888:8888 --network pythonexposed -v "${PWD}"/notebooks:/home/jovyan/work jupyter/scipy-notebook
+
+docker run -it --rm -p 8888:8888 --mount type=bind,src=".",target=/home/jovyan/work jupyter/scipy-notebook
+
+docker run -it --rm -p 8888:8888 -v "%cd%/notebooks:/home/jovyan/work" jupyter/scipy-notebook
